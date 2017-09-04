@@ -1,0 +1,38 @@
+#preview{
+    margin-top: 100px;
+}
+
+#print {
+  padding: 5px;
+  font-size: 20px;
+}
+
+#color-text {
+  text-transform: uppercase;
+}
+
+div.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+div.accordion.active,
+div.accordion:hover {
+  background-color: #ddd;
+}
+
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+}
+
+div.panel.show {
+  display: block;
+}

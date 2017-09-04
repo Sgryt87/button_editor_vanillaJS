@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ButtonEditor</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <div class="accordion"><h2>Front&amp;Text</h2></div>
+      <div id="front-text" class="panel">
+
+        <div>
+          <label>Text</label>
+          <input type="text" value="Text" id="text" oninput="inputText()" data-value="Text">
+        </div>
+
+        <div>
+          <input type="checkbox" id="checkboxFF" onchange="enabled(this)">
+          <label>Font-family</label>
+          <select id="select" oninput="inputFF()" disabled class="input" data-value="Arial">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="checkbox" id="checkboxFC" onchange="enabled(this)">
+          <label>Font-color</label>
+          <input type="text" value="#000000" id="color-text" oninput="fontColorVal()" disabled class="input" data-value="#000000">
+          <input type="color" id="color-box" oninput="fontColorBox()" disabled class="input" data-value="#000000">
+        </div>
+
+        <div>
+          <input type="checkbox" id="checkboxFS" onchange="enabled(this)">
+          <label>Font-size</label>
+          <input type="text" value="20" id="font-size-text" oninput="fontSizeText()" disabled class="input" data-value="20">
+          <input type="range" value="20" min="0" max="60" step="1" id="font-size-slider" oninput="fontSizeSlider()" disabled class="input" data-value="20">
+        </div>
+
+
+      </div>
+
+<!-- 2nd bar-->
+    <div class="accordion"><h2>Box</h2></div>
+      <div id="formating-box" class="panel">
+
+         <div>
+           <input type="checkbox" id="checkboxPT" onchange="enabled(this)">
+           <label>Padding-Top</label>
+           <input type="text" value="5" id="padding-top-box" disabled class="input" data-value="5"  oninput="padTopBox()">
+           <input type="range" min="0" max="40" range="1" value="5" id="padding-top-val" disabled class="input" data-value="5" oninput="padTopVal()">
+         </div>
+
+         <div>
+           <input type="checkbox" id="checkboxPR" onchange="enabled(this)">
+           <label>Padding-Right</label>
+           <input type="text" value="10" id="padding-right-box"  disabled class="input" data-value="10"  oninput="padRightBox()">
+           <input type="range" min="0" max="40" range="1" value="10" id="padding-right-val"  disabled class="input" data-value="10" oninput="padRightVal()">
+         </div>
+
+         <div>
+           <input type="checkbox" id="checkboxPB" onchange="enabled(this)">
+           <label>Padding-Bottom</label>
+           <input type="text" value="5" id="padding-bottom-box"  disabled class="input" data-value="5" oninput="padBotBox()">
+           <input type="range" min="0" max="40" range="1" value="5" id="padding-bottom-val"  disabled class="input" data-value="5" oninput="padBotVal()">
+         </div>
+
+       <div>
+         <input type="checkbox" id="checkboxPL" onchange="enabled(this)">
+         <label>Padding-Left</label>
+         <input type="text" value="0" id="padding-left-box"  disabled class="input" data-value="10" oninput="padLeftBox()">
+         <input type="range" min="0" max="40" range="1" value="10" id="padding-left-val"  disabled class="input" data-value="10" oninput="padLeftVal()">
+       </div>
+
+      </div>
+
+
+      <br>
+
+    <div id="reset">
+      <button id="reset-btn" onclick="reset()">Reset</button>
+    </div>
+
+    <div id="preview">
+      <button id="print">Text</button>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="JS/accordion.js"></script>
+  <script type="text/javascript" src="JS/frontText.js"></script>
+  <script type="text/javascript" src="JS/formatingBox.js"></script>
+</body>
+</html>
